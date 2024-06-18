@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.aaa {
+  position: absolute !important;
+top: 50% !important;
+left: 50% !important;
+transform: translate(-50%, -50%) !important;
+margin: 0 !important;
+}
+.btn {
+  border: none;
+  margin-top: 4.5rem;
+  margin-bottom: 2.5rem;
+  margin-inline: auto;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #74185E;
+  color: white;
+  overflow: hidden;
+   -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #91188C;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out
+}
+
+.btn:hover::before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(.52,1.64,.37,.66);
+  transition-timing-function: cubic-bezier(.52,1.64,.37,.66)
+}
+
+/* Modal form */
+
+.modal {
+  position: absolute;
+  background: white;
+  /* top: 20%; */
+  inset: 0px;
+  width: fit-content;
+  /*height: 5rem;*/
+  max-width: 100vw;
+  max-height: fit-content;
+  margin: auto;
+  z-index: 2;
+}
+
+.modal-content {
+  display: flex;
+  font-family: Montserrat, sans-serif;
+  border-radius: 10px;
+  -webkit-box-shadow: -1px -2px 42px -19px rgba(0,0,0,0.74);
+  -moz-box-shadow: -1px -2px 42px -19px rgba(0,0,0,0.74);
+  box-shadow: -1px -2px 42px -19px rgba(0,0,0,0.74);
+}
+
+.modal-content h1 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.modal-body {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  border-radius: 4rem;
+}
+
+form {
+  margin-top: 1.4rem;
+  font-size: .9rem;
+}
+.column {
+  flex: 50%;
+  padding: 10px;
+}
+
+#main hr {
+   border: 0;
+   height: 2px;
+   background: #74185E;
+   background-image: linear-gradient(to right, #D47AE5, #74185E, #D47AE5);
+}
+
+.column#main {
+  flex: 50%;
+  padding: 25px;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+#main .form-control {
+  border: 1px solid #ccc;
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 20px;
+  font-size: .9rem;
+  margin: .8rem 0;
+}
+.modal-body label {
+  margin-bottom: 0;
+}
+
+.form-submit {
+  border: none;
+  margin: 30px auto;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #74185E;
+  color: white;
+}
+.column#secondary {
+  max-width: fit-content;
+}
+.column .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column#secondary img {
+  margin-top: 100px;
+  border-radius: 5px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.btn-open {
+  position: absolute;
+  bottom: 150px;
+}
+
+.btn-close {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  transform: translate(10px, -20px);
+  padding: 0.5rem 0.7rem;
+  background: #eee;
+  border-radius: 50%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
